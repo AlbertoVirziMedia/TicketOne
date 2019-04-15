@@ -16,13 +16,12 @@ return [
             'level' => \Monolog\Logger::DEBUG,
         ],
 
-        'db' => '' [
-
+        'db' => [
           'host' => '127.0.0.1',
           'dbname' => 'TicketOne',
           'port' => '8889',
           'user' => 'root',
           'pass' => 'root'
-        ]
+        ],
     ],
 ];

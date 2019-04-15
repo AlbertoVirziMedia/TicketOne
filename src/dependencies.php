@@ -20,8 +20,12 @@ $container['logger'] = function ($c) {
 
 $container['db'] = function($c) {
   $settings = $c->get('settings')['db'];
-  $pdo = new PDO('mysql:host=:' .$settings['host'] . ';port' . $settings['port'] . ';dbname' . $settings['dbname'], $settings['user'], $settings['pass']);
-  $pdo->setAttribute(PDO::ATTR_ERRMODE; PDO::ERRMODE_EXCEPTION);
-  $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE; PDO::FETCH_ASSOC);
-}
-;
+  $pdo = new PDO("mysql:host=" .$setthings['host'] . ';port' . $settings['port'] . ';dbname' . $settings['dbname'], $settings['user'], $settings['pass']);
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+};
+
+$container[EventsController::class] = function ($c) {
+
+  return new App\controllers\EventsController($c->db);
+};

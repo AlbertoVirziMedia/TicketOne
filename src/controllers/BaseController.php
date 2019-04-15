@@ -1,8 +1,8 @@
 <?php
 
-  namespace App/controllers;
+  namespace App\controllers;
 
-  class: BaseController {
+  class BaseController {
     protected function response_ok($response, $label, $data)
       {
         $data = array(
