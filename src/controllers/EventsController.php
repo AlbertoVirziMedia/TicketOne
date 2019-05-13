@@ -8,7 +8,7 @@
   class EventsController extends BaseController{
     private $event;
 
-    public function _construct($db){
+    public function __construct($db){
 
       $this->event = new Event($db);
 

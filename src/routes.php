@@ -11,5 +11,5 @@ $app->get('/[{name}]', function (Request $request, Response $response, array $ar
 });*/
 
     $app->group('/api', function(\Slim\App $app) {
-      $app->get('/events', EventsController::class , ':index');
+      $app->get('/events', \EventsController::class . ':index');
     });

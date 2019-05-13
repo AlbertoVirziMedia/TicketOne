@@ -4,7 +4,7 @@
 
   use App\models\Base;
 
-  class Event extend Base {
+  class Event extends Base {
 
       public function index() {
           $query = $this->db->prepare("SELECT * FROM Event");

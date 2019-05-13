@@ -6,7 +6,7 @@
 
     protected $db;
 
-    public function _construct($sdb) {
+    public function __construct($db) {
       $this->db = $db;
 
     }
